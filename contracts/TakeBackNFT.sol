@@ -21,7 +21,7 @@ contract TakeBackNFT is SettingIds, DSAuth {
     mapping (address => uint256) public userToNonce;
 
     // used for old&new users to claim their ring out
-    event TakenBackNFT(address indexed _user, uint indexed _nonce, uint256 _value);
+    event TakenBackNFT(address indexed _user, uint indexed _nonce, uint256 _tokenId);
     // used for supervisor to claim all kind of token
     event ClaimedTokens(address indexed _token, address indexed _controller, uint _amount);
 
