@@ -42,6 +42,10 @@ contract TakeBackNFT is SettingIds, DSAuth {
 //    }
 
     function initializeContract(ISettingsRegistry _registry, uint256 _networkId) public singletonLockCall {
+
+        owner = msg.sender;
+        emit LogSetOwner(msg.sender);
+
         registry = _registry;
         networkId = _networkId;
     }

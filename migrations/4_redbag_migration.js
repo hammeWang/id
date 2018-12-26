@@ -10,7 +10,7 @@ var conf = {
 }
 
 module.exports = function(deployer, network) {
-    if (network != 'kovan') {
+    if (network == 'kovan') {
         return;
     }
 
