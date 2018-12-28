@@ -17,33 +17,8 @@ contract TakeBackNFT is DSAuth {
     // used for supervisor to claim all kind of token
     event ClaimedTokens(address indexed _token, address indexed _controller, uint _amount);
 
-<<<<<<< HEAD
-
-    /*
-      *  Modifiers
-      */
-    modifier singletonLockCall() {
-        require(!singletonLock, "Only can call once");
-        _;
-        singletonLock = true;
-    }
-
-//    constructor(address _supervisor, uint256 _networkId) public {
-//        tokenAdd = _token;
-//        supervisor = _supervisor;
-//        networkId = _networkId;
-//    }
-
-    function initializeContract(ISettingsRegistry _registry, uint256 _networkId) public singletonLockCall {
-
-        owner = msg.sender;
-        emit LogSetOwner(msg.sender);
-
-        registry = _registry;
-=======
     constructor(address _supervisor, uint256 _networkId) public {
         supervisor = _supervisor;
->>>>>>> upstream/master
         networkId = _networkId;
     }
 
